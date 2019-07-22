@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Jiang Xin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Jiang Xin">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Jiang Xin">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jiang Xin">
+  
+    <link rel="alternate" href="/atom.xml" title="Jiang Xin" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jiang Xin</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">something writed for fun</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-day3-运算符的学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/19/day3-运算符的学习/" class="article-date">
+  <time datetime="2019-07-19T09:14:16.238Z" itemprop="datePublished">2019-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#运算符的学习</p>
+<p>##比较运算符<br>有：&gt;,&lt;,==,!=,&gt;=,&lt;=<br>所有比较运算符的结果都为布尔值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">100</span>&gt;<span class="number">10</span>) <span class="comment"># True</span></span><br><span class="line">print(<span class="number">100</span>&gt;<span class="number">1000</span>) <span class="comment">#False</span></span><br><span class="line">print(<span class="number">100</span>==<span class="number">100</span>) <span class="comment">#True</span></span><br><span class="line">print(<span class="number">100</span>==<span class="number">10</span>) <span class="comment">#False</span></span><br><span class="line">print(<span class="number">100</span>!=<span class="number">100</span>) <span class="comment">#False</span></span><br><span class="line">print(<span class="number">100</span>&gt;=<span class="number">1000</span>) <span class="comment">#Flase</span></span><br><span class="line"></span><br><span class="line">result1 = <span class="number">10</span> &gt;=<span class="number">1</span></span><br><span class="line">result2 = <span class="number">10</span> &lt;= <span class="number">1</span></span><br><span class="line">print(result1,result2) <span class="comment">#True False</span></span><br></pre></td></tr></table></figure>
+
+<p>##逻辑运算符<br>逻辑运算符：and，or，not<br>所有逻辑运算符的结果都是布尔值，操作对象也是布尔值</p>
+<ol>
+<li><p>逻辑与运算：and<br>运算规则：两个都为True，结果才为True；只要有一个False，结果就是False。（相当于生活中的并且）<br>True and True == True<br>True and False == True<br>False and True == True<br>False and False == True<br>应用：要求多个条件同时满足的时候，使用and将多个条件连接在一起</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">score = <span class="number">90</span></span><br><span class="line">age = <span class="number">20</span></span><br><span class="line"><span class="comment"># 进入公司的条件：分数不低于90，并且年龄大于25</span></span><br><span class="line">print(score&gt;=<span class="number">90</span> <span class="keyword">and</span> age&gt;<span class="number">25</span>) <span class="comment">#False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断num是否在0到100之间</span></span><br><span class="line">num = <span class="number">10</span>                   </span><br><span class="line">print(<span class="number">0</span>&lt;=num&lt;=<span class="number">100</span>)         <span class="comment">#写法1</span></span><br><span class="line">print(num&gt;=<span class="number">0</span> <span class="keyword">and</span> num&lt;=<span class="number">100</span>) <span class="comment">#写法2 True</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>逻辑或运算：or<br>运算规则：两个都为False，结果才为False；只要有一个True，结果就为True。（相当于生活中的或者）<br>True or True == True<br>True or False == True<br>False or True == True<br>False or False == False<br>应用：要求多个条件中至少有一个条件满足的时候，使用or将多个条件连接在一起</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">score1 = <span class="number">80</span> <span class="comment">#学习成绩</span></span><br><span class="line">score2 = <span class="number">90</span> <span class="comment">#操评分</span></span><br><span class="line"><span class="comment"># 获奖学金的条件：学习成绩大于90或者操评分大于95</span></span><br><span class="line">print(<span class="string">'是否获得奖学金'</span>,score1&gt;<span class="number">90</span> <span class="keyword">or</span> score2&gt;<span class="number">95</span>) <span class="comment">#False</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>逻辑非运算：not<br>运算规则：True变False，False变True<br>not True == False<br>not False == True<br>应用：对一个条件进行否定</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入网吧的条件：年龄不小于18</span></span><br><span class="line">age = <span class="number">9</span></span><br><span class="line">print(<span class="string">'是否能进入网吧'</span>,<span class="keyword">not</span> age&lt;<span class="number">18</span>) <span class="comment">#写法1</span></span><br><span class="line">print(<span class="string">'是否能进入网吧'</span>,age &gt;= <span class="number">18</span>) <span class="comment">#写法2</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>练习：获取奖学金条件：学习成绩大于90分并且操评分不低于80分，或者操评分不低于95并且学习成绩大于75分</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">score1 = <span class="number">80</span> <span class="comment">#学习成绩</span></span><br><span class="line">score2 = <span class="number">90</span> <span class="comment">#操评分</span></span><br><span class="line">print((score1&gt;<span class="number">90</span> <span class="keyword">and</span> <span class="keyword">not</span> score2 &lt; <span class="number">80</span>) <span class="keyword">or</span> (<span class="keyword">not</span> score2 &lt; <span class="number">95</span> <span class="keyword">and</span> score1 &gt; <span class="number">75</span>)) <span class="comment">#False</span></span><br></pre></td></tr></table></figure>
+
+<p>##赋值运算<br>=，+=，-=，<em>=，/=，//=，%=，*</em>=<br>所有的赋值运算符左边都要求必须是变量；复合赋值运算符左边要求除了是变量以外，这个变量还必须已经赋过值</p>
+<ol>
+<li><p>= :直接将=右边的值赋给左边的变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">100</span></span><br><span class="line">num = <span class="number">12</span>*<span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>=，+=，-=，<em>=，/=，//=，%=，*</em>=<br>变量 += 值  -  相当‘于变量 = 变量 + 值’<br>赋值过程：将原变量中的数据取出来，和后边的值相加，然后将最新的结果重新赋给变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">num2 = <span class="number">10</span></span><br><span class="line">num2 += <span class="number">2</span></span><br><span class="line">print(num2)</span><br><span class="line"></span><br><span class="line">num2 = <span class="number">10</span></span><br><span class="line">num2 *= <span class="number">2</span></span><br><span class="line">print(num2)</span><br><span class="line"></span><br><span class="line">num2 = <span class="number">10</span></span><br><span class="line">num2 /= <span class="number">2</span></span><br><span class="line">print(num2) </span><br><span class="line"></span><br><span class="line">num2 = <span class="number">15</span></span><br><span class="line">num2 //= <span class="number">2</span></span><br><span class="line">print(num2)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>##运算符的优先级<br>数学运算符&gt;比较运算符&gt;逻辑运算符&gt;赋值运算符<br>先算优先级高的，再算优先级低的。如果有括号，先算括号里面的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">10</span></span><br><span class="line">num += <span class="number">12</span>*<span class="number">3</span></span><br><span class="line">print(num)</span><br><span class="line"></span><br><span class="line">num = <span class="number">10</span></span><br><span class="line">num += <span class="literal">True</span> <span class="comment">#True代表一，False代表0</span></span><br><span class="line">print(num)</span><br></pre></td></tr></table></figure>
+
+<p>##数字类型<br>int，float，bool，complex</p>
+<ol>
+<li><p>1.int（整型）<br>整型包含了数字中所有的整数，包括正整数，负整数和0；例如0,1，-77，+89</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">0</span>,<span class="number">1</span>,<span class="number">-77</span>,+<span class="number">89</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>float（浮点型）<br>浮点型包含数字中所有的小数；例如：9.32，-8.5,0.0<br>支持科学计数法：2e3(2乘10的3次方)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">0.0</span>,<span class="number">8.9</span>,<span class="number">-6.7</span>)</span><br><span class="line">print(<span class="number">2e3</span>)</span><br><span class="line">print(<span class="number">2e-3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 补充：可以用**进行开方运算</span></span><br><span class="line">print(<span class="number">3</span>**<span class="number">2</span>)</span><br><span class="line">print(<span class="number">9</span>**(<span class="number">1</span>/<span class="number">2</span>)) <span class="comment">#开平方</span></span><br><span class="line">print(<span class="number">8</span>**(<span class="number">1</span>/<span class="number">3</span>)) <span class="comment">#开3次方</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>bool（布尔）<br>布尔只有True和False；实质，当布尔参与数字运算时True就是1，False就是0</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">1</span>==<span class="literal">True</span>)</span><br><span class="line">print(<span class="literal">False</span>==<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>complex（复数）   -   (了解)<br>复数是指包含实部和虚部的这种数：10+2j，19j，-10j</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">10</span>+<span class="number">2j</span>)</span><br><span class="line">print((<span class="number">10</span>+<span class="number">2j</span>)*(<span class="number">11</span><span class="number">-8j</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取数据的类型：type()<br>type(数据)   -   获取括号中执行的数据对应的类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type1 = type(<span class="number">10</span>+<span class="number">2j</span>)</span><br><span class="line">print(type1)</span><br><span class="line"></span><br><span class="line">print(type(<span class="literal">True</span>))</span><br><span class="line"></span><br><span class="line">num = <span class="number">3e4</span></span><br><span class="line">print(type(num))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断是否是指定的类型：isinstance()<br>isinstance(数据，类型)  -  判断指定的数据是否是指定的类型，结果是布尔值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">result = isinstance(<span class="number">10</span>,float)  <span class="comment">#判断10是否为浮点型</span></span><br><span class="line">print(result)</span><br><span class="line"></span><br><span class="line">result = isinstance(num,float)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>类型转换：类型名()<br>类型名(数据) - 将指定的数据转换成指定的类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">12.5</span></span><br><span class="line">new_num =int(num)</span><br><span class="line">print(new_num)</span><br><span class="line">print(float(<span class="number">100</span>))</span><br><span class="line">print(float(<span class="literal">True</span>))</span><br><span class="line">print(bool(<span class="number">90</span>))</span><br><span class="line">print(bool(<span class="number">0.0</span>)) <span class="comment">#布尔转整型或者浮点型：True -&gt;1/1.0  False -&gt; 0/0.0</span></span><br><span class="line">                 <span class="comment">#整型/浮点型转布尔：非0数字 -&gt; True  0/0.0 -&gt; False</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>##if语句<br>分支结构：Python中只有if语句（if条件语句）</p>
+<ol>
+<li>if语句<br>a.语法<br>‘’’<br>if条件语句:<br>语句块<br>‘’’<br>b.说明<br>‘’’<br>if  -  固定写法，是关键字<br>条件语句  -  可以使一个值，一个变量，一个运算表达式等。不能是赋值语句<br>:  -  固定写法，（在Python中有冒号的地方一般都会产生缩进）<br>语句块  -  一行或多行代码（必须和if保持一个缩进）<br>‘’’<br>c.执行过程：先判断条件语句的结果是否为True（如果不是布尔值就看转换为布尔值后是否为True），<br>如果为True就执行语句块对应的代码，否则就不执行语句块对应的代码<br>d.应用：某个操作或某段代码是在满足某个条件下才会执行，不满足条件就不执行的时候就使用if条件语句<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">0</span>:</span><br><span class="line">	print(<span class="string">'if语句1'</span>)</span><br><span class="line">	print(<span class="string">'if语句2'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="number">100</span>&gt;<span class="number">10</span>:</span><br><span class="line">	print(<span class="string">'100大于10'</span>)</span><br><span class="line">print(<span class="string">'语句3'</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如果age的值大于等于18就打印“成年”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">7</span></span><br><span class="line"><span class="keyword">if</span> age &gt;=<span class="number">18</span>:</span><br><span class="line">	print(<span class="string">'成年'</span>)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>if-else结构<br>a.语法：<br>“””<br>if 条件语句：<br>语句块1<br>else：<br>语句块2<br>“””<br>b.执行过程：判断条件语句是否为True（如果不是布尔就转换为布尔再看是否为True），<br>如果为True就执行语句块1，否则执行语句块2<br>c.应用：满足条件执行某个操作，不满足条件执行另外的操作，就使用if-else结构</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">10</span></span><br><span class="line"><span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">	print(<span class="string">'偶数'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'奇数'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> num % <span class="number">2</span>:</span><br><span class="line">	print(<span class="string">'奇数'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'偶数'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果age的值大于等于18，打印“已成年”，否则打印“未成年”</span></span><br><span class="line">age = int(input(<span class="string">'输入年龄：'</span>))</span><br><span class="line"><span class="keyword">if</span> age&gt;=<span class="number">18</span>:</span><br><span class="line">	print(<span class="string">'已成年'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'未成年'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>if-elif-else结构<br>a.语法<br>‘’’<br>if 条件语句1：<br>代码块1<br>elif 条件语句2：<br>代码块2<br>elif 条件语句3：<br>代码块3<br>else：<br>代码块4</p>
+</li>
+</ol>
+<p>‘’’<br>b.说明：在if-elif-else结构中，elif可以根据情况有多个，else结构根据情况可以省略<br>c.执行过程：先判断条件语句1是否成立，成立执行代码块1，然后整个if语句结束；<br>条件语句1不成立，就判断条件语句2是否成立，成立就执行代码块2，然后整个if语句结束；<br>条件语句2不成立，就判断条件语句3是否成立，成立就执行代码块3，然后整个if语句结束；<br>如果前面的所有条件都不成立，就执行else后面的代码块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">score = <span class="number">67</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">score &gt; 90  --&gt; 优秀</span></span><br><span class="line"><span class="string">80&lt;= score &lt;= 90  --&gt; 良好</span></span><br><span class="line"><span class="string">60&lt;= score &lt;= 79  --&gt; 及格</span></span><br><span class="line"><span class="string">score &lt; 60  --&gt;不及格</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> score &gt; <span class="number">90</span>:</span><br><span class="line">	print(<span class="string">'优秀'</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;=<span class="number">80</span>:</span><br><span class="line">	print(<span class="string">'良好'</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span>:</span><br><span class="line">	print(<span class="string">'及格'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'不及格'</span>)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>if嵌套<br>在if，elif，else对应的语句块中，可以根据情况写一个或者多个其他的if语句结构<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> score &gt; <span class="number">90</span>:</span><br><span class="line">	print(<span class="string">'优秀'</span>)</span><br><span class="line">	<span class="keyword">if</span> score == <span class="number">100</span>:</span><br><span class="line">		print(<span class="string">'满分'</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;=<span class="number">80</span>:</span><br><span class="line">	print(<span class="string">'良好'</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span>:</span><br><span class="line">	print(<span class="string">'及格'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'不及格'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断一个数是否为偶数，如果是就打印“偶数”，否则打印“奇数”，如果这个数能被4整除，打印“4的倍数”</span></span><br><span class="line">num = <span class="number">16</span></span><br><span class="line"><span class="keyword">if</span> num%<span class="number">2</span>:</span><br><span class="line">	print(<span class="string">'奇数'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'偶数'</span>)</span><br><span class="line">	<span class="keyword">if</span> num%<span class="number">4</span> == <span class="number">0</span>:</span><br><span class="line">		print(<span class="string">'4的倍数'</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>##str类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">90</span>+<span class="number">88</span>)</span><br><span class="line"><span class="comment"># print(88+'89')</span></span><br><span class="line"><span class="comment"># print(100&gt;'78') #字符串不能和数字相加</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># input函数，不管输入的内容是什么，结果都是字符串类型的值</span></span><br><span class="line">age = int(input(<span class="string">'年龄：'</span>))  <span class="comment">#将输入的数据转换成整型数据，然后再赋给变量age</span></span><br><span class="line"></span><br><span class="line">print(type(age))</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/19/day3-运算符的学习/" data-id="cjy9w3a990000hzv4am9s6ejp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/19/day3-运算符的学习/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jiang Xin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
